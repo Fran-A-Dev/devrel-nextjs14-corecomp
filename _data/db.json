@@ -1,22 +1,28 @@
 {
   "characters": [
     {
-      "name": "Chewbacca"
+      "name": "Chewbacca",
+      "id": 1
     },
     {
-      "name": "C-3PO"
+      "name": "C-3PO",
+      "id": 2
     },
     {
-      "name": "R2-D2"
+      "name": "R2-D2",
+      "id": 3
     },
     {
-      "name": "Luke Skywalker"
+      "name": "Luke Skywalker",
+      "id": 4
     },
     {
-      "name": "Darth Vader"
+      "name": "Darth Vader",
+      "id": 5
     },
     {
-      "name": "Obi-Wan Kenobi"
+      "name": "Obi-Wan Kenobi",
+      "id": 6
     }
   ]
 }
