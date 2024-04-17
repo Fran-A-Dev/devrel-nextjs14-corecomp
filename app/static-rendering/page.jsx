@@ -40,10 +40,10 @@ export default async function PostList() {
   return (
     <div>
       {posts.map((post) => (
-        <div key={post.uri} className="card mb-8">
+        <div key={post.uri} className="card">
           {/* Add margin-bottom between posts */}
-          <h3 className="text-xl font-bold mb-4">{post.title}</h3>
-          <h4>{post.date}</h4>
+          <h3>{post.title}</h3>
+          <h4 className="mb-4 text-blue-900">{post.date}</h4>
           <div
             className="text-base mb-4"
             dangerouslySetInnerHTML={{

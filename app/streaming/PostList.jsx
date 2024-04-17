@@ -47,11 +47,11 @@ export default async function PostList() {
   const posts = await fetchPosts();
 
   return (
-    <div>
+    <div className="mb-8">
       {posts.map((post) => (
-        <div key={post.databaseId} className="card mb-8">
+        <div key={post.databaseId} className="card">
           <h3 className="text-xl font-bold mb-4">{post.title}</h3>
-          <h4 className="mb-4 text-red-500">
+          <h4 className="mb-4 text-blue-900">
             <RelativeDate dateString={post.date} />
           </h4>
           <div

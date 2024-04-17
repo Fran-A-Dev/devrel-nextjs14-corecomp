@@ -31,3 +31,20 @@ body {
     text-wrap: balance;
   }
 }
+
+.card {
+  @apply bg-blue-50
+    shadow-sm 
+    rounded-md 
+    py-3 px-4 my-4 
+    relative 
+    overflow-hidden;
+}
+.card h3 {
+  @apply font-bold text-gray-700 text-lg 
+    mb-0;
+}
+
+.card div {
+  @apply text-black text-sm;
+}

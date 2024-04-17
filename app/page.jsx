@@ -49,15 +49,12 @@ export default async function PostList() {
   return (
     <div>
       {posts.map((post) => (
-        <div key={post.databaseId} className="card mb-8">
-          <h3 className="text-xl text-yellow-300 font-bold mb-4">
-            {post.title}
-          </h3>
-          <h4 className="mb-4 text-yellow-300">
+        <div key={post.databaseId} className="card">
+          <h3>{post.title}</h3>
+          <h4 className="mb-4 text-blue-900">
             <RelativeDate dateString={post.date} />
           </h4>
           <div
-            className="text-base mb-4"
             dangerouslySetInnerHTML={{
               __html: post.excerpt,
             }}

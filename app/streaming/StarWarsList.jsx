@@ -26,7 +26,7 @@ export default async function StarWarsList() {
         My Favorite Star Wars Characters
       </h1>
       {characters.map((character) => (
-        <div key={character.id} className="card mb-8">
+        <div key={character.id} className="card">
           <h3 className="text-xl font-bold mb-4">{character.name}</h3>
         </div>
       ))}
