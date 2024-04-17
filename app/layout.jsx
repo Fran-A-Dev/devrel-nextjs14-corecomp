@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Rubik } from "next/font/google";
-
+import Navbar from "./components/Navbar";
 const rubik = Rubik({ subsets: ["latin"] });
 
 export default function RootLayout({ children }) {
@@ -12,12 +12,13 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className={rubik.className}>
+        <Navbar />
         {children}
 
         <footer
           style={{ textAlign: "center", marginTop: "20px", fontSize: "14px" }}
         >
-          © 2023 Fran Agulto Dev Stoke
+          © 2024 Fran Agulto Dev Stoke
         </footer>
       </body>
     </html>

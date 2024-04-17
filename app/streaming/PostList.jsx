@@ -2,27 +2,34 @@ import { formatDistance, parseISO } from "date-fns";
 
 async function fetchPosts() {
   const query = `
-        query getPosts {
-          posts {
-            nodes {
-              postId
-              title
-              date
-              excerpt
-            }
-          }
+    query getPosts {
+      posts {
+        nodes {
+          postId
+          title
+          date
+          excerpt
         }
-      `;
+      }
+    }
+  `;
   const response = await fetch(
-    `https://smartcahce.wpengine.com/graphql?query=${query}`,
+    `https://smartcache.wpenginepowered.com/graphql`,
     {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json", // Indicate that we're sending and expecting JSON
+      },
+      body: JSON.stringify({ query }), // Send the query as a JSON string
       next: {
-        revalidate: 0, // use 0 to opt out of using cache
+        revalidate: 0, // Next.js specific fetch option to opt out of cache
       },
     }
   );
+  if (!response.ok) {
+    throw new Error(`Failed to fetch posts, status: ${response.status}`);
+  }
   const responseJson = await response.json();
-
   return responseJson.data.posts.nodes;
 }
 

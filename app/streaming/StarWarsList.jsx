@@ -3,10 +3,17 @@ async function getCharacters() {
   await new Promise((resolve) => setTimeout(resolve, 3000));
 
   const res = await fetch("http://localhost:4000/characters", {
+    headers: {
+      "Content-Type": "application/json", // Indicate that we're expecting JSON
+    },
     next: {
-      revalidate: 0, // use 0 to opt out of using cache
+      revalidate: 0, // Next.js specific fetch option to opt out of cache
     },
   });
+
+  if (!res.ok) {
+    throw new Error(`Failed to fetch characters, status: ${res.status}`);
+  }
 
   return res.json();
 }
