@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav className="bg-gray-800 text-white px-4 py-2 flex items-center justify-between flex-wrap">
       <h1 className="flex-grow text-xl font-semibold">
-        Fran's Next.js 14 Core Competencies Example
+        Fran's Next.js 14 Headless WP Core Comp Examples
       </h1>
       <ul className="flex space-x-4">
         <li>
