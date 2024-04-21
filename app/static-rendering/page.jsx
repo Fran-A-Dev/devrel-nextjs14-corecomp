@@ -20,7 +20,7 @@ async function getPosts() {
     )}`,
     { next: { revalidate: 10 } },
     {
-      method: "",
+      method: "GET",
       headers: {
         "Content-Type": "application/json",
         // ... any other headers you need to include (like authentication tokens)
