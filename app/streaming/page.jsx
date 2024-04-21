@@ -8,9 +8,8 @@ export default function Streaming() {
     <div>
       <h1 className="text-3xl font-bold my-8">Streaming</h1>
 
-      <PostList />
-
       <Suspense fallback={<Loading />}>
+        <PostList />
         <StarWarsList />
       </Suspense>
     </div>
